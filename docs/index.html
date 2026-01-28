@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My QA Portfolio</title>
+  <!-- Font Awesome first (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous" />
+
+  <!-- My styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+  <nav>
+    <div class="logo">
+      <a href="index.html"><strong>Meg QA</strong></a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <!-- Dark mode toggle switch -->
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </nav>
+
   <header>
     <h1>Welcome to My QA Portfolio</h1>
-    <p>This is a test page for GitHub Pages.</p>
+    <p>Showcasing automated tests, projects, and my QA skills.</p>
+    <div class="button-group">
+      <button onclick="window.location.href='https://github.com/megdever0'">
+        Check Out My GitHub <i class="fab fa-github"></i>
+      </button>
+      <button onclick="window.location.href='projects.html'">
+        View Projects
+      </button>
+      <button onclick="window.location.href='https://www.linkedin.com/in/megandevereux/'">
+        Check Out My LinkedIn <i class="fab fa-linkedin"></i>
+      </button>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>I am a Quality Assurance Engineer applying my skills in automated testing and web development.</p>
-    </section>
-
-    <section>
-      <h2>Portfolio</h2>
-      <p>Links to my projects will appear here soon!</p>
-    </section>
-  </main>
-
   <footer>
-    <p>&copy; 2026 My QA Portfolio</p>
+    <p>&copy; 2026 megDever0</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
