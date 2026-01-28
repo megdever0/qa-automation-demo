@@ -1,0 +1,24 @@
+# Node.js dependencies
+node_modules/
+
+# Playwright test artifacts
+playwright-report/
+test-results/
+screenshots/
+videos/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Optional: build outputs (if you add any later)
+dist/
+build/
