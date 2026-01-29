@@ -4,16 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My QA Portfolio</title>
-  <!-- Font Awesome first (for icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    crossorigin="anonymous" />
-
-  <!-- My styles -->
+  <title>Welcome</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="page-container">
+  <!-- NAVBAR -->
   <nav>
     <div class="logo">
       <a href="index.html"><strong>Meg QA</strong></a>
@@ -22,7 +18,8 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
-      <!-- Dark mode toggle switch -->
+
+      <!-- Dark mode toggle -->
       <label class="switch">
         <input type="checkbox" id="theme-toggle">
         <span class="slider round"></span>
@@ -30,21 +27,17 @@
     </div>
   </nav>
 
-  <header>
-    <h1>Welcome to My QA Portfolio</h1>
-    <p>Showcasing automated tests, projects, and my QA skills.</p>
-    <div class="button-group">
-      <button onclick="window.location.href='https://github.com/megdever0'">
-        Check Out My GitHub <i class="fab fa-github"></i>
-      </button>
-      <button onclick="window.location.href='projects.html'">
-        View Projects
-      </button>
-      <button onclick="window.location.href='https://www.linkedin.com/in/megandevereux/'">
-        Check Out My LinkedIn <i class="fab fa-linkedin"></i>
-      </button>
-    </div>
-  </header>
+  <!-- CONTENT -->
+  <div class="content">
+    <section>
+      <h1>Welcome! 🎉</h1>
+      <p id="welcome-message"></p>
+      <div class="button-group">
+        <button onclick="window.location.href='index.html'">Return to Home</button>
+        <button onclick="window.location.href='login.html'">Return to Login Page</button>
+      </div>
+    </section>
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -59,7 +52,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="javascript/welcome.js"></script>
 </body>
 
 </html>

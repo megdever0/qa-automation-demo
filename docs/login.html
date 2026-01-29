@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Meg QA Portfolio</title>
+    <title>Login Portal</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -27,30 +27,29 @@
         </div>
     </nav>
 
-    <!-- HEADER -->
-    <header>
-        <h1>My Projects</h1>
-        <p>Automation projects coming soon!</p>
-    </header>
-
-    <!-- PROJECTS SECTION -->
-    <section class="projects">
-        <div class="project-card">
-            <h2>Under Construction 🚧</h2>
-            <p>Playwright automation projects will be added here soon. Stay tuned!</p>
+    <!-- LOGIN SECTION -->
+    <section class="login">
+        <div class="login-card">
+            <h2>Login Portal 🔐</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" autocomplete="off" placeholder="Enter username">
+                    <small class="error-message"></small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" autocomplete="off" placeholder="Enter password">
+                    <small class="error-message"></small>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p id="success-message" style="display:none;">
+                Login successful! ✅
+            </p>
         </div>
     </section>
 
-    <div class="webpageButtons">
-        <h3>In the meantime, check out my progress on some webpages
-            I plan to create test cases for and automate in the future</h3>
-
-        </button>
-        <button onclick="window.location.href='login.html'">
-            Login Page
-        </button>
-
-    </div>
     <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 megDever0</p>
@@ -65,7 +64,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="javascript/login.js"></script>
 </body>
 
 </html>
