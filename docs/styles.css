@@ -580,17 +580,16 @@ body.dark-mode #success-message {
 .social-btn {
   display: inline-block;
   text-decoration: none;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease;
+  font-size: 1.8rem;
 }
 
-.social-logo {
-  width: 30px;
-  height: 30px;
+.social-btn i {
   color: var(--text-white);
   transition: color 0.3s ease;
 }
 
-.social-btn:hover .social-logo {
+.social-btn:hover i {
   color: var(--primary-color);
 }
 
@@ -598,10 +597,10 @@ body.dark-mode #success-message {
   transform: scale(1.1);
 }
 
-body.dark-mode .social-logo {
+body.dark-mode .social-btn i {
   color: var(--text-white);
 }
 
-body.dark-mode .social-btn:hover .social-logo {
+body.dark-mode .social-btn:hover i {
   color: var(--primary-color);
 }
