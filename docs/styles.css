@@ -22,6 +22,11 @@
   --text-dark: #f4f7fb;
   --text-muted: #555;
   --text-white: #ffffff;
+
+  /*Spacing*/
+  --space-sm: 2rem;
+  --space-md: 4rem;
+  --space-lg: 6rem;
 }
 
 html,
@@ -64,7 +69,10 @@ body {
    ========================= */
 nav {
   background-color: var(--primary-color);
-  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem var(--space-sm);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -138,13 +146,9 @@ button:hover {
   padding-top: 2rem;
   display: flex;
   justify-content: center;
-  /* center all buttons horizontally */
   gap: 2rem;
-  /* increase spacing between buttons */
   flex-wrap: wrap;
-  /* allows wrapping on smaller screens */
   margin-top: 2rem;
-  /* optional: space above the buttons */
 
 }
 
@@ -152,7 +156,7 @@ button:hover {
    Sections
    ========================= */
 section {
-  padding: 2rem;
+  padding: var(--space-md) var(--space-sm);
   max-width: 900px;
   margin: auto;
 }
@@ -297,6 +301,12 @@ body.dark-mode .project-card p {
   color: var(--secondary-color);
 }
 
+.webpageButtons {
+  text-align: center;
+  justify-content: center;
+  flex: wrap;
+}
+
 /* =========================
    About Me Page
    ========================= */
@@ -365,4 +375,233 @@ body.dark-mode .skills-card {
   font-size: 1.2rem;
   /* slightly bigger than text */
   line-height: 1;
+}
+
+/* ======================
+   LOGIN LAYOUT
+====================== */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 8em var(--space-sm) var(--space-sm);
+}
+
+/* ======================
+   LOGIN CARD
+====================== */
+.login-card {
+  background-color: var(--project-card-light);
+  border-radius: 8px;
+  padding: 4rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 280px;
+  height: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.login-card h2 {
+  color: var(--text-white);
+  margin-bottom: 0.5rem;
+  margin-top: 0em;
+}
+
+.login-card label {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: large;
+}
+
+/* ======================
+   FORM
+====================== */
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-top: 1.5em;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  width: 250px;
+  color: var(--text-light);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(0, 94, 163, 0.5);
+}
+
+/* Error text */
+.error-message {
+  color: #b00020;
+  font-size: 0.85rem;
+  min-height: 1rem;
+}
+
+/* ======================
+   LOGIN BUTTON
+====================== */
+#login-form button[type="submit"] {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  padding: 0.8rem;
+  margin-top: 2em;
+  max-width: 20rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#login-form button[type="submit"]:hover {
+  background-color: var(--footer-light);
+  transform: translateY(-1px);
+}
+
+/* ======================
+   SUCCESS MESSAGE
+====================== */
+.success-message {
+  background-color: var(--primary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* =====================================================
+   DARK MODE STYLES
+===================================================== */
+body.dark-mode .login-card {
+  background-color: var(--project-card-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .login-card h2 {
+  color: var(--primary-color);
+}
+
+body.dark-mode .form-group label {
+  color: var(--text-dark);
+}
+
+body.dark-mode .form-group input {
+  background-color: #1a1a1a;
+  color: var(--text-dark);
+  border: 1px solid #444;
+}
+
+body.dark-mode .form-group input::placeholder {
+  color: #888;
+}
+
+body.dark-mode .form-group input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+body.dark-mode .error-message {
+  color: #ff6b6b;
+}
+
+body.dark-mode #login-form button[type="submit"] {
+  background-color: var(--secondary-color);
+  color: #111;
+}
+
+body.dark-mode #login-form button[type="submit"]:hover {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+}
+
+body.dark-mode #success-message {
+  color: var(--text-white);
+}
+
+/* ======================
+   WELCOME/CONTENT SECTION
+====================== */
+.content section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  padding-top: 10rem;
+}
+
+/* ======================
+   WELCOME MESSAGE USERNAME
+====================== */
+#welcome-message strong {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* ======================
+   SOCIAL LINKS
+====================== */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-btn {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-logo {
+  width: 30px;
+  height: 30px;
+  color: var(--text-white);
+  transition: color 0.3s ease;
+}
+
+.social-btn:hover .social-logo {
+  color: var(--primary-color);
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+}
+
+body.dark-mode .social-logo {
+  color: var(--text-white);
+}
+
+body.dark-mode .social-btn:hover .social-logo {
+  color: var(--primary-color);
 }

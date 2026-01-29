@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <a href="index.html"><strong>Meg QA</strong></a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+
+            <!-- Dark mode toggle -->
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </nav>
+
+    <!-- LOGIN SECTION -->
+    <section class="login">
+      <div class="login-card">
+        <h2>Login Portal 🔐</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" autocomplete="off" placeholder="Enter username">
+            <small class="error-message"></small>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" autocomplete="off"  placeholder="Enter password">
+            <small class="error-message"></small>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <p id="success-message" style="display:none;">
+          Login successful! ✅
+        </p>
+      </div>
+    </section>
+
+  <footer>
+    © 2026 Meg QA Portfolio
+  </footer>
+
+  <script src="javascript/login.js"></script>
+</body>
+</html>

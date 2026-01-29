@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-container">
+   <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <a href="index.html"><strong>Meg QA</strong></a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+
+            <!-- Dark mode toggle -->
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <section>
+        <h1>Welcome! 🎉</h1>
+        <p id="welcome-message"></p>
+        <div class="button-group">
+          <button onclick="window.location.href='index.html'">Return to Home</button>
+          <button onclick="window.location.href='login.html'">Return to Login Page</button>
+        </div>
+      </section>
+    </div>
+
+  <footer>
+    © 2026 Meg QA Portfolio
+  </footer>
+
+  <script src="javascript/welcome.js"></script>
+</body>
+</html>
